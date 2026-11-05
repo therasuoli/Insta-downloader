@@ -1,1 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IG Saver – Instagram Downloader</title>
+  <meta name="description" content="Download public Instagram videos, reels and photos." />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>IG Saver</h1>
+      <p class="sub">Download public Instagram videos, reels, IGTV and photos.</p>
+    </header>
 
+    <form id="form" class="card" autocomplete="off">
+      <label for="url" class="sr-only">Instagram link</label>
+      <div class="row">
+        <input id="url" name="url" type="url" inputmode="url" required
+               placeholder="https://www.instagram.com/reel/…" />
+        <button type="button" id="paste" class="ghost">Paste</button>
+      </div>
+      <button type="submit" id="submit" class="primary">Download</button>
+    </form>
+
+    <p id="error" class="error" role="alert" hidden></p>
+    <div id="loading" class="loading" hidden><span class="spinner"></span> Fetching…</div>
+    <section id="results" class="results"></section>
+
+    <footer>
+      <p>Only public posts are supported. Respect creators' copyright — save content for personal use
+         or with the owner's permission. Not affiliated with Instagram.</p>
+    </footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
